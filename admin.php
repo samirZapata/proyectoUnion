@@ -14,7 +14,6 @@
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="img/logo.png" alt="">
                     <h1>La Union</h1>
                 </div>
 
@@ -24,12 +23,12 @@
             </div>
 
             <div class="sidebar">
-                <a href="index.html" target="tienda">
+                <a href="admin.php" target="tienda">
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
 
-                <a href="tienda.html" class="active" target="tienda">
+                <a href="tienda.php" class="active" target="tienda">
                     <span class="material-icons-sharp">location_on</span>
                     <h3>Registrar local</h3>
                 </a>
@@ -39,7 +38,7 @@
                     <h3>Registrar descuentos</h3>
                 </a>
 
-                <a href="#">
+                <a href="registrarProducto.php" target="tienda">
                     <span class="material-icons-sharp">inventory</span>
                     <h3>Registrar productos</h3>
                 </a>
@@ -85,7 +84,7 @@
                 </a>
             </div>
         </aside>
-        <iframe src="tienda.html" name="tienda"  id="tienda" frameborder="2" height="700px" width="1000px">
+        <iframe src="registrarProducto.php" name="tienda"  id="tienda" frameborder="2" height="1010px" width="1450px">
         <main>
             <h1>DASHBOARD</h1>
             <div class="date">

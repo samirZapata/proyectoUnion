@@ -15,7 +15,7 @@ body {
 }
 
 .container .card {
-    position: relative;
+    position: vertical;
     width: 320px;
     height: 450px;
     background: #232323;
