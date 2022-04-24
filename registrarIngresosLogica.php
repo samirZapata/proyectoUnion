@@ -5,17 +5,17 @@ $con = mysqli_connect($host, $user, $pass, $bd) or die('Fallo la conexion');
 mysqli_set_charset($con, "utf8");
 
 $id = $_POST['id'];
-$nombre = $_POST['nombre'];
-$descripcion = $_POST['descripcion'];
+$producto = $_POST['producto'];
 $cantidad = $_POST['cantidad'];
-$precio = $_POST['precio'];
+$fecha = $_POST['fecha'];
+$total = $_POST['total'];
 
 
-$sql = "INSERT INTO productos VALUES('$id', '$nombre', '$descripcion', '$cantidad', '$precio')";
+$sql = "INSERT INTO registrarIngresos VALUES('$id', '$producto', '$cantidad', '$fecha', '$total')";
 $query = mysqli_query($con, $sql);
 
 if ($query) {
-    Header("Location: registrarProducto.php");
+    Header("Location: registrarIngresos.php");
 }
 else {
 //echo '<script language="javascript">alert("Registro exitoso!");</script>';

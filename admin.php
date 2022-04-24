@@ -33,7 +33,7 @@
                     <h3>Registrar local</h3>
                 </a>
 
-                <a href="#">
+                <a href="registrarDescuentos.php" target="tienda">
                     <span class="material-icons-sharp">local_offer</span>
                     <h3>Registrar descuentos</h3>
                 </a>
@@ -43,17 +43,17 @@
                     <h3>Registrar productos</h3>
                 </a>
 
-                <a href="#">
+                <a href="registrarClientes.php" target="tienda">
                     <span class="material-icons-sharp">group_add</span>
                     <h3>Registrar clientes</h3>
                 </a>
 
-                <a href="#">
+                <a href="registrarVentas.php" target="tienda">
                     <span class="material-icons-sharp">request_quote</span>
                     <h3>Registrar ventas</h3>
                 </a>
 
-                <a href="#">
+                <a href="registrarIngresos.php" target="tienda">
                     <span class="material-icons-sharp">addchart</span>
                     <h3>Registrar ingresos</h3>
                 </a>
@@ -78,7 +78,7 @@
                     <h3>Imprimir factura</h3>
                 </a>
 
-                <a href="#">
+                <a href="cerrar.php">
                     <span class="material-icons-sharp">directions_walk</span>
                     <h3>Salir</h3>
                 </a>
