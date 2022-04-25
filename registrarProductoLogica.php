@@ -25,7 +25,7 @@ else {
 }
 
 
-
+/*
 $sql = "SELECT * FROM productos";
 $query = mysqli_query($con, $sql);
 if ($query) {
@@ -35,5 +35,5 @@ if ($query) {
     Header("Location: verProductos.php");
 } else {
     echo "No hay datos";
-}
+}*/
 ?>
