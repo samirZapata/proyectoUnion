@@ -16,7 +16,7 @@ if (empty($_POST['id']) || empty($_POST['nombre']) || empty($_POST['descripcion'
     $query = mysqli_query($con, $sql);
 
     if ($query) {
-        $alert = '<p class="msg_save">Registro actualizado exitosamente</p>';
+        echo  '<p class="msg_save">Registro actualizado exitosamente</p>';
      }else {
          $alert = '<p class="msg_error">Error al actualizar el registro</p>';
      }

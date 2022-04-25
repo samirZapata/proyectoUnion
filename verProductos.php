@@ -23,6 +23,7 @@
             background-color: #f6f6f6;
             border-radius: 10px;
             padding: 20px;
+            margin-top: 80px;
         }
     </style>
 
@@ -52,7 +53,7 @@
                                 echo "<td class='text-center'>".$fila['precio']."</td>";
                                 echo "<td class='text-center'>
                                         <a href='modificarProducto.php?id=".$fila['id']."' class='btn btn-warning'>Editar</a>
-                                        <a href='eliminarProducto.php?id=".$fila['id']."' class='btn btn-danger'>Eliminar</a>
+                                        <a href='eliminarProductos.php?id=".$fila['id']."' class='btn btn-danger'>Eliminar</a>
                                     </td>";
                                 echo "</tr>";
                             }

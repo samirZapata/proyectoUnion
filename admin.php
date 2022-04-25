@@ -38,7 +38,7 @@
                         <a href="verProductos.php" target="tienda" class="nav__link nav__link--inside">Ver productos</a>
                     </li>
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Eliminar productos</a>
+                        <a href="eliminarProductos.php" target="tienda" class="nav__link nav__link--inside">Eliminar productos</a>
                     </li>
                     <li class="list__inside">
                         <a href="modificarProducto.php" target="tienda" class="nav__link nav__link--inside">Modificar productos</a>
