@@ -7,7 +7,7 @@
 
         
         $con = mysqli_connect($host, $user, $pass,$bd);
-        $alert = '<script language="javascript">alert("Conexion exitosa!");</script>';
+        //echo '<p class="msg-save">Conectado</p>';
         
         if (!$con) {
             die("Connection failed: " . mysqli_connect_error());

@@ -60,14 +60,14 @@
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Ver Descuentos</a>
+                        <a href="verDescuentos.php" target="tienda" class="nav__link nav__link--inside">Ver Descuentos</a>
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Eliminar Descuentos</a>
+                        <a href="eliminarDescuentos.php" target="tienda" class="nav__link nav__link--inside">Eliminar Descuentos</a>
                     </li>
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Modificar Descuentos</a>
+                        <a href="modificarDescuentos.php" target="tienda" class="nav__link nav__link--inside">Modificar Descuentos</a>
                     </li>
                 </ul>
 
@@ -87,14 +87,14 @@
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Ver Ingresos del mes</a>
+                        <a href="verIngresos.php" target="tienda" class="nav__link nav__link--inside">Ver Ingresos del mes</a>
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Eliminar ingreso</a>
+                        <a href="eliminarIngresos.php" target="tienda" class="nav__link nav__link--inside">Eliminar ingreso</a>
                     </li>
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Modificar ingreso</a>
+                        <a href="modificarIngresos.php" target="tienda" class="nav__link nav__link--inside">Modificar ingreso</a>
                     </li>
                 </ul>
 

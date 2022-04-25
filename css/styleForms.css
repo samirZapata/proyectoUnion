@@ -7,12 +7,12 @@
     font-family: 'Varela Round', sans-serif;
 }
 
-body{
+body {
     background: #EAEBEF;
 }
 
 
-.form-register{
+.form-register {
     width: 400px;
     background: #24303c;
     padding: 30px;
@@ -23,12 +23,12 @@ body{
     box-shadow: 7px 13px 37px #000;
 }
 
-.form-register h4{
+.form-register h4 {
     font-size: 22px;
     margin-bottom: 20px;
 }
 
-.controls{
+.controls {
     width: 100%;
     background: #24303c;
     padding: 10px;
@@ -39,7 +39,7 @@ body{
     color: white;
 }
 
-.form-register .botons{
+.form-register .botons {
     width: 100%;
     background: #FA5805;
     border: none;
@@ -50,7 +50,26 @@ body{
     border-radius: 4px;
     cursor: pointer;
 }
-.form-register .botons:hover{
+
+.form-register .botons:hover {
     background: #575DFB;
     color: white;
+}
+
+.msg_save {
+    background: limegreen;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.msg_save:hover {
+    background: red;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 18px;
 }
