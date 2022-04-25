@@ -10,6 +10,11 @@
     <title>Registrar Ventas</title>
 </head>
 <body>
+<style>
+        body{
+            background-color: #EAEBEF;
+        }
+    </style>
 
     <form action="registrarVentasLogica.php" method="POST" class="form-register">
         <h4 align="center">Registrar Ventas</h4>

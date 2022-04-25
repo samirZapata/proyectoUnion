@@ -6,200 +6,167 @@
     <title>Dashboard</title>
     <link rel="stylesheet"  href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    
 </head>
 <body>
     
-    <div class="container">
-        <aside>
-            <div class="top">
-                <div class="logo">
-                    <h1>La Union</h1>
+<main>
+<nav class="nav">
+    
+        <ul class="list">
+            <li class="list__item">
+                <div class="list__button" >
+                <i class='bx bxs-dashboard' class="list__arrow"></i>
+                    <a href="#" class="nav__link">Dashboard</a>
+                </div>
+            </li>
+
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <i class='bx bxs-package list_image' class="list__arrow"></i>
+                    <a href="#" class="nav__link">Productos</a>
+                    <i class='bx bx-chevron-right list__arrow'></i>
                 </div>
 
-                <div class="close" id="close-btn">
-                    <span class="material-icons-sharp">close</span>
-                </div>
-            </div>
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="registrarProducto.php" target="tienda" class="nav__link nav__link--inside">Registrar productos</a>
+                    </li>
 
-            <div class="sidebar">
-                <a href="admin.php" target="tienda">
-                    <span class="material-icons-sharp">grid_view</span>
-                    <h3>Dashboard</h3>
-                </a>
+                    <li class="list__inside">
+                        <a href="verProductos.php" target="tienda" class="nav__link nav__link--inside">Ver productos</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Eliminar productos</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="modificarProducto.php" target="tienda" class="nav__link nav__link--inside">Modificar productos</a>
+                    </li>
+                </ul>
 
-                <a href="tienda.php" class="active" target="tienda">
-                    <span class="material-icons-sharp">location_on</span>
-                    <h3>Registrar local</h3>
-                </a>
+            </li>
 
-                <a href="registrarDescuentos.php" target="tienda">
-                    <span class="material-icons-sharp">local_offer</span>
-                    <h3>Registrar descuentos</h3>
-                </a>
-
-                <a href="registrarProducto.php" target="tienda">
-                    <span class="material-icons-sharp">inventory</span>
-                    <h3>Registrar productos</h3>
-                </a>
-
-                <a href="registrarClientes.php" target="tienda">
-                    <span class="material-icons-sharp">group_add</span>
-                    <h3>Registrar clientes</h3>
-                </a>
-
-                <a href="registrarVentas.php" target="tienda">
-                    <span class="material-icons-sharp">request_quote</span>
-                    <h3>Registrar ventas</h3>
-                </a>
-
-                <a href="registrarIngresos.php" target="tienda">
-                    <span class="material-icons-sharp">addchart</span>
-                    <h3>Registrar ingresos</h3>
-                </a>
-
-                <a href="#">
-                    <span class="material-icons-sharp">playlist_remove</span>
-                    <h3>Retirar productos</h3>
-                </a>
-
-                <a href="#">
-                    <span class="material-icons-sharp">group_remove</span>
-                    <h3>Retirar clientes</h3>
-                </a>
-
-                <a href="#">
-                    <span class="material-icons-sharp">manage_accounts</span>
-                    <h3>Control de usuarios</h3>
-                </a>
-
-                <a href="#">
-                    <span class="material-icons-sharp">receipt_long</span>
-                    <h3>Imprimir factura</h3>
-                </a>
-
-                <a href="cerrar.php">
-                    <span class="material-icons-sharp">directions_walk</span>
-                    <h3>Salir</h3>
-                </a>
-            </div>
-        </aside>
-        <iframe src="registrarProducto.php" name="tienda"  id="tienda" frameborder="2" height="1010px" width="1450px">
-        <main>
-            <h1>DASHBOARD</h1>
-            <div class="date">
-                <input type="date">
-            </div>
-
-            <div class="insights">
-
-                <div class="sales">
-                    <span class="material-icons-sharp">sell</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total descuentos</h3>
-                            <h1>$2.000.000</h1>
-                        </div>
-                        <div class="progreso">
-                            <svg>
-                                <circle cx='38' cy='38' r='35'></circle>
-                            </svg>
-                            <div class="numero">
-                                <p>83%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Ultimas 24 horas</small>
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <i class='bx bxs-offer' class="list__arrow"></i>
+                    <a href="#" class="nav__link">Descuentos</a>
+                    <i class='bx bx-chevron-right list__arrow'></i>
                 </div>
 
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="registrarDescuentos.php" target="tienda" class="nav__link nav__link--inside">Registrar Descuentos</a>
+                    </li>
 
-                <div class="expenses">
-                    <span class="material-icons-sharp">savings</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total creditos</h3>
-                            <h1>$3.000.000</h1>
-                        </div>
-                        <div class="progreso">
-                            <svg>
-                                <circle cx='38' cy='38' r='35'></circle>
-                            </svg>
-                            <div class="numero">
-                                <p>50%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Ultimas 24 horas</small>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Ver Descuentos</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Eliminar Descuentos</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Modificar Descuentos</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+
+                    <i class='bx bxs-pie-chart-alt-2' class="list__arrow"></i>
+                    <a href="#" class="nav__link">Ingresos</a>
+                    <i class='bx bx-chevron-right list__arrow'></i>
                 </div>
 
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="registrarIngresos.php" target="tienda" class="nav__link nav__link--inside">Registrar ingresos</a>
+                    </li>
 
-                <div class="income">
-                    <span class="material-icons-sharp">auto_graph</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total ventas</h3>
-                            <h1>$10.000.000</h1>
-                        </div>
-                        <div class="progreso">
-                            <svg>
-                                <circle cx='38' cy='38' r='35'></circle>
-                            </svg>
-                            <div class="numero">
-                                <p>25%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Ultimas 24 horas</small>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Ver Ingresos del mes</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Eliminar ingreso</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Modificar ingreso</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <i class='bx bx-money' class="list__arrow"></i>
+                    <a href="#" class="nav__link">Ventas</a>
+                    <i class='bx bx-chevron-right list__arrow'></i>
                 </div>
-            </div>
 
-            <div class="pedidos-recientes">
-                <h2>Pedidos Recientes</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre producto</th>
-                            <th>ID Producto</th>
-                            <th>Cantidad</th>
-                            <th>Estado</th>
-                            <th></th> 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>MALETIN CON HERRAMINETAS 
-                                MIXTAS DE 142 PIEZAS</td>
-                            <td>123456789</td>
-                            <td>2</td>
-                            <td class="warning">Pendiente</td>
-                            <td class="primary">Detalles</td>
-                        </tr>
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="registrarVentas.php" target="tienda" class="nav__link nav__link--inside">Registrar venta</a>
+                    </li>
 
-                        <tr>
-                            <td>MALETIN CON HERRAMINETAS 
-                                MIXTAS DE 142 PIEZAS</td>
-                            <td>246897754</td>
-                            <td>10</td>
-                            <td class="warning">Pendiente</td>
-                            <td class="primary">Detalles</td>
-                        </tr>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Ver ventas</a>
+                    </li>
 
-                        <tr>
-                            <td>MALETIN CON HERRAMINETAS 
-                                MIXTAS DE 142 PIEZAS</td>
-                            <td>567458742</td>
-                            <td>5</td>
-                            <td class="warning">Pendiente</td>
-                            <td class="primary">Detalles</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="#">Ver Todos</a>
-            </div>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Eliminar venta</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Modificar venta</a>
+                    </li>
+                </ul>
 
-        </main>
-    </iframe>
+            </li>
 
-    </div>
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <i class='bx bxs-user-badge' class="list__arrow"></i>
+                    <a href="#" class="nav__link">Usuarios</a>
+                    <i class='bx bx-chevron-right list__arrow'></i>
+                </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="registrarUsuarios.php" target="tienda" class="nav__link nav__link--inside">Registrar usuario</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Ver Usuarios</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Eliminar usuario</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Modificar usuario</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="list__item">
+                <div class="list__button">
+                    <i class='bx bx-run' class="list__img"></i>
+                    <a href="cerrar.php" class="nav__link">Salir</a>
+                </div>
+            </li>
+
+        </ul>
+        <iframe src="registrarProducto.php" name="tienda"  id="tienda" frameborder="0" height="100%" width="1350px">
+           
+        </iframe>
+    </nav>
+
+    
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>

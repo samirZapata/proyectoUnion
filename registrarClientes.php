@@ -10,7 +10,11 @@
     <title>Registrar Productos</title>
 </head>
 <body>
-
+<style>
+        body{
+            background-color: #EAEBEF;
+        }
+    </style>
     <form action="registrarClientesLogica.php" method="POST" class="form-register">
         <h4 align="center">Registrar Clientes</h4>
         <input type="text" class="form-control mb-3 controls" name="id" placeholder="Cedula" >

@@ -10,7 +10,11 @@
     <title>Registrar ingresos</title>
 </head>
 <body>
-
+<style>
+        body{
+            background-color: #EAEBEF;
+        }
+    </style>
     <form action="registrarIngresosLogica.php" method="POST" class="form-register">
         <h4 align="center">Registrar Ingresos</h4>
         <input type="text" class="form-control mb-3 controls" name="id" placeholder="ID" >
