@@ -29,15 +29,25 @@ $resultado = mysqli_query($con, $consulta);
 	 $usu=$fila['usuario'];	
 	 $clav=$fila['clave'];	 
 	 
-	 session_start();
-	 $_SESSION['clave'] = $pass;
+	 if ($usu != 'admin') {
+		session_start();
+		$_SESSION['clave'] = $pass;
+		header("Location: tienda.php?cla='$pass'");
+	 }else{
+		session_start();
+		$_SESSION['clave'] = $pass;
+		header("Location: admin.php?cla='$pass'");
+	 }
 	 
+	 
+
+
 	
-		if ($usu == 'admin') {
+		/*if ($usu == 'admin') {
 			header("Location: admin.php?cla='$pass'");
 		} else {
 			header("Location: tienda.php?cla='$pass'");
-		}
+		}*/
 		
 
 	}

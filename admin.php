@@ -102,6 +102,7 @@
 
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
+
                     <i class='bx bx-money' class="list__arrow"></i>
                     <a href="#" class="nav__link">Ventas</a>
                     <i class='bx bx-chevron-right list__arrow'></i>
@@ -113,14 +114,14 @@
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Ver ventas</a>
+                        <a href="verVentas.php" target="tienda" class="nav__link nav__link--inside">Ver ventas del mes</a>
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Eliminar venta</a>
+                        <a href="eliminarVentas.php" target="tienda" class="nav__link nav__link--inside">Eliminar venta</a>
                     </li>
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Modificar venta</a>
+                        <a href="modificarVentas.php" target="tienda" class="nav__link nav__link--inside">Modificar venta</a>
                     </li>
                 </ul>
 
@@ -139,14 +140,15 @@
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Ver Usuarios</a>
+                        <a href="verUsuario.php" target="tienda" class="nav__link nav__link--inside">Ver usuario</a>
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Eliminar usuario</a>
+                        <a href="eliminarUsuarios.php" target="tienda" class="nav__link nav__link--inside">Eliminar usuario</a>
                     </li>
+                    
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Modificar usuario</a>
+                        <a href="modificarUsuarios.php" target="tienda" class="nav__link nav__link--inside">Modificar usuarios</a>
                     </li>
                 </ul>
 
