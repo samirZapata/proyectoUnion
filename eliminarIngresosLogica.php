@@ -13,11 +13,11 @@ else {
     $query = mysqli_query($con, $sql);
 
     if ($query) {
-        echo '<p class="msg_save">Registro eliminado exitosamente</p>';
+        header("Location: verIngresos.php?save=Registro eliminado exitosamente");
+    } else {
+        header("Location: verIngresos.php?error=Error al eliminar el registro");
     }
-    else {
-        echo '<p class="msg_error">Error al eliminar el registro</p>';
-    }
+    
 }
 
 //MOSTRAR DATOS

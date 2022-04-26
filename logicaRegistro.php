@@ -11,10 +11,14 @@ $txtContraseñaRegistro=$_POST['contraseñaRegistro'];
 
 $sql="INSERT INTO datos VALUES('$txtCedulaRegistro', '$txtNombreRegistro', '$txtUsuarioRegistro', '$txtContraseñaRegistro', '2')";
 $query= mysqli_query($con, $sql);
-
-if ($query) {
-    Header("Location: index.php");
-}else{
-
+try {
+    if ($query) {
+        header("Location: index.php?save=Usuario guardado exitosamente");
+    }else{
+        header("Location: registro.php?error=Error al guardar el usuario");
+    }
+} catch (\Throwable $th) {
+    echo 'Error';
 }
+
 ?>

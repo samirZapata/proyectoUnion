@@ -56,20 +56,27 @@ body {
     color: white;
 }
 
-.msg_save {
-    background: limegreen;
+.error{
+    background: #E2867D;
     color: white;
     padding: 10px;
     border-radius: 4px;
-    margin-bottom: 16px;
     font-size: 18px;
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    top: 120px;
 }
 
-.msg_save:hover {
-    background: red;
+.save {
+    background: #2bda1f;
     color: white;
     padding: 10px;
     border-radius: 4px;
-    margin-bottom: 16px;
     font-size: 18px;
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    top: 710px;
+    
 }

@@ -13,10 +13,9 @@ else {
     $query = mysqli_query($con, $sql);
 
     if ($query) {
-        echo '<p class="msg_save">Registro eliminado exitosamente</p>';
-    }
-    else {
-        $alert = '<p class="msg_error">Error al eliminar el registro</p>';
+        header("Location: eliminarProductos.php?save=Registro eliminado exitosamente");
+    } else {
+        header("Location: eliminarProductos.php?error=Error al eliminar el registro");
     }
 }
 

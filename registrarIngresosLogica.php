@@ -15,9 +15,9 @@ $sql = "INSERT INTO registrarIngresos VALUES('$id', '$producto', '$cantidad', '$
 $query = mysqli_query($con, $sql);
 
 if ($query) {
-    Header("Location: registrarIngresos.php");
+    header("Location: registrarIngresos.php?save=Registro guardado exitosamente");
 }
 else {
-//echo '<script language="javascript">alert("Registro exitoso!");</script>';
+    header("Location: registrarIngresos.php?error=Error al guardar el registro");
 }
 ?>

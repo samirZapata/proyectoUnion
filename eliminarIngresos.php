@@ -19,7 +19,17 @@
         body{
             background-color: #EAEBEF;
         }
-    </style>
+    </style><?php if (isset($_GET['error'])) { ?>
+    <p class='error'> <?php echo $_GET['error']; ?></p>
+    <?php
+        }?>
+
+    <?php if (isset($_GET['save'])) { ?>
+    <p class='save' align="center"> <?php echo $_GET['save']; ?></p>
+    <?php
+        }?>
+
+
     <form action="eliminarIngresosLogica.php" method="POST" class="form-register">
         <h4 align="center">Eliminar Ingresos</h4>
         <input type="text" class="form-control mb-3 controls" name="id" placeholder="ID" value="<?php echo $id ?>">

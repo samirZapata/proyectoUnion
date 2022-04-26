@@ -16,9 +16,10 @@ $sql = "INSERT INTO clientes VALUES('$id', '$nombre', '$apellido', '$direccion',
 $query = mysqli_query($con, $sql);
 
 if ($query) {
-    Header("Location: registrarClientes.php");
+    header("Location: registrarClientes.php?save=Registro guardado exitosamente");
 }
 else {
-//echo '<script language="javascript">alert("Registro exitoso!");</script>';
+    header("Location: registrarClientes.php?error=Error al guardar el registro");
 }
+
 ?>

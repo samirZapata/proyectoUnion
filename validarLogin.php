@@ -13,10 +13,13 @@ $usuario = $_POST['cusu'];
 $pass = $_POST['cclave'];
 
 //VALIDAR CONTENIDO EN LAS VARIABLES O CAJAS DE TEXTO
-if (empty($usuario) | empty($pass)) 
+if (empty($usuario)) 
 	{
-	header("Location: ./");
-	exit();
+		header("Location: index.php?error=Debe llenar todos los campos");
+		exit();
+	}elseif (empty($pass)) {
+		header("Location: index.php?error=Debe llenar todos los campos");
+		exit();
 	}
 	
 //VALIDANDO EXISTENCIA DEL USUARIO
@@ -31,15 +34,27 @@ $resultado = mysqli_query($con, $consulta);
 	 
 	 if ($usu != 'admin') {
 		session_start();
+		sleep(3);
 		$_SESSION['clave'] = $pass;
-		header("Location: tienda.php?cla='$pass'");
+		header("Location: tienda.php?save=Bienvenido  cla='$pass'");
 	 }else{
 		session_start();
+		sleep(3);
 		$_SESSION['clave'] = $pass;
-		header("Location: admin.php?cla='$pass'");
+		header("Location: admin.php?save=Bienvenido cla='$pass'");
 	 }
 	 
-	 
+	 /*
+	 	<?php if (isset($_GET['error'])) { ?>
+            <p class='error'> <?php echo $_GET['error']; ?></p>
+        <?php
+}?>
+
+        <?php if (isset($_GET['save'])) { ?>
+            <p class='save' align="center"> <?php echo $_GET['save']; ?></p>
+        <?php
+}?>
+	 */
 
 
 	
@@ -54,10 +69,13 @@ $resultado = mysqli_query($con, $consulta);
 	
 	   	
   //Valida Usuario y/Contraseña no coincidentes 
-   if (($usu != $usuario) | ($clav != $pass))
+   if (($usu != $usuario))
 	{
-	header("Location:./");
-	exit();
+		header("Location: index.php?error=Usuario o Contraseña Incorrectos");
+		exit();
+	}elseif (($clav != $pass)) {
+		header("Location: index.php?error=Usuario o Contraseña Incorrectos");
+		exit();
 	}
 
 }

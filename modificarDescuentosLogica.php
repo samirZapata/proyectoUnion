@@ -17,10 +17,10 @@ else {
     $query = mysqli_query($con, $sql);
 
     if ($query) {
-        echo '<p class="msg_save">Registro actualizado exitosamente</p>';
+        Header("Location: modificarDescuento.php?save=Registro modificado exitosamente");
     }
     else {
-        echo '<p class="msg_error">Error al actualizar el registro</p>';
+        header("Location: modificarDescuento.php?error=Error al modificar el registro");
     }
 }
 

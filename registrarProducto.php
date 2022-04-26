@@ -15,13 +15,22 @@
             background-color: #EAEBEF;
         }
     </style>
+            <?php if (isset($_GET['error'])) { ?>
+            <p class='error'> <?php echo $_GET['error']; ?></p>
+        <?php
+        }?>
+
+        <?php if (isset($_GET['save'])) { ?>
+            <p class='save' align="center"> <?php echo $_GET['save']; ?></p>
+        <?php
+        }?>
     <form action="registrarProductoLogica.php" method="POST" class="form-register">
         <h4 align="center">Registrar Producto</h4>
-        <input type="text" class="form-control mb-3 controls" name="id" placeholder="Id" >
-        <input type="text" class="form-control mb-3 controls" name="nombre" placeholder="Nombre" >
-        <input type="text" class="form-control mb-3 controls" name="descripcion" placeholder="Descripcion" >
-        <input type="text" class="form-control mb-3 controls" name="cantidad" placeholder="cantidad" >
-        <input type="text" class="form-control mb-3 controls" name="precio" placeholder="Precio" >
+        <input type="text" class="form-control mb-3 controls" name="id" placeholder="Id" required>
+        <input type="text" class="form-control mb-3 controls" name="nombre" placeholder="Nombre" required >
+        <input type="text" class="form-control mb-3 controls" name="descripcion" placeholder="Descripcion" required>
+        <input type="text" class="form-control mb-3 controls" name="cantidad" placeholder="cantidad" required>
+        <input type="text" class="form-control mb-3 controls" name="precio" placeholder="Precio" required>
 
         <input type="submit" value="Registrar producto" class="botons">
     </form>

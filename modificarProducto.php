@@ -20,8 +20,19 @@
             background-color: #EAEBEF;
         }
     </style>
+
+<?php if (isset($_GET['error'])) { ?>
+            <p class='error'> <?php echo $_GET['error']; ?></p>
+        <?php
+        }?>
+
+        <?php if (isset($_GET['save'])) { ?>
+            <p class='save' align="center"> <?php echo $_GET['save']; ?></p>
+        <?php
+        }?>
     <form action="modificarProducto.php" method="POST" class="form-register">
         <h4 align="center">Modificar Producto</h4>
+
         <input type="text" class="form-control mb-3 controls" name="id" placeholder="Id" value="<?php echo $id ?>">
         <input type="text" class="form-control mb-3 controls" name="nombre" placeholder="Nombre" value="<?php echo $nombre ?>" required>
         <input type="text" class="form-control mb-3 controls" name="descripcion" placeholder="Descripcion" value="<?php echo $descripcion ?>" required>

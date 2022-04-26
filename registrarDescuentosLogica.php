@@ -15,9 +15,9 @@ $sql = "INSERT INTO descuentos VALUES('$id', '$producto', '$precio', '$fechaI', 
 $query = mysqli_query($con, $sql);
 
 if ($query) {
-    Header("Location: registrarDescuentos.php");
+    header("Location: registrarDescuento.php?save=Registro guardado exitosamente");
 }
 else {
-//echo '<script language="javascript">alert("Registro exitoso!");</script>';
+    header("Location: registrarDescuento.php?error=Error al guardar el registro");
 }
 ?>

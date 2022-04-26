@@ -16,9 +16,9 @@ $sql = "INSERT INTO registrarVentas VALUES('$id', '$producto', '$cliente', '$can
 $query = mysqli_query($con, $sql);
 
 if ($query) {
-    Header("Location: registrarVentas.php");
+    header("Location: registrarVentas.php?save=Registro guardado exitosamente");
 }
 else {
-//echo '<script language="javascript">alert("Registro exitoso!");</script>';
+    header("Location: registrarVentas.php?error=Error al guardar el registro");
 }
 ?>

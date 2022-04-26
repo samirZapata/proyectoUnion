@@ -20,6 +20,16 @@
             background-color: #EAEBEF;
         }
     </style>
+
+    <?php if (isset($_GET['error'])) { ?>
+            <p class='error'> <?php echo $_GET['error']; ?></p>
+        <?php
+        }?>
+
+        <?php if (isset($_GET['save'])) { ?>
+            <p class='save' align="center"> <?php echo $_GET['save']; ?></p>
+        <?php
+        }?>
     <form action="modificarUsuarios.php" method="POST" class="form-register">
         
         <h4 align="center">Modificar Usuarios</h4>

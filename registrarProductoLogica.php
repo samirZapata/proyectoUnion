@@ -18,22 +18,18 @@ $sql = "INSERT INTO productos VALUES('$id', '$nombre', '$descripcion', '$cantida
 $query = mysqli_query($con, $sql);
 
 if ($query) {
-    Header("Location: registrarProducto.php");
+    //echo '<p class="save">Registro guardado exitosamente</p>';
+    Header("Location: registrarProducto.php?save=Registro guardado exitosamente");
 }
-else {
-//echo '<script language="javascript">alert("Registro exitoso!");</script>';
+else {    
+    Header("Location: registrarProducto.php?save=Error al guardar el registro");
 }
 
 
-/*
-$sql = "SELECT * FROM productos";
-$query = mysqli_query($con, $sql);
-if ($query) {
-    while ($row = mysqli_fetch_array($query)) {
-        echo $row['id'] . " " . $row['nombre'] . " " . $row['descripcion'] . " " . $row['cantidad'] . " " . $row['precio'] . "<br>";
-    }
-    Header("Location: verProductos.php");
-} else {
-    echo "No hay datos";
-}*/
+/* $sql = "SELECT * FROM productos"; $query = mysqli_query($con, $sql); if ($query) {
+ while ($row = mysqli_fetch_array($query)) {
+ echo $row['id'] . " " . $row['nombre'] . " " . $row['descripcion'] . " " . $row['cantidad'] . " " . $row['precio'] . "<br>";
+ }
+ Header("Location: verProductos.php"); } else {
+ echo "No hay datos"; }*/
 ?>

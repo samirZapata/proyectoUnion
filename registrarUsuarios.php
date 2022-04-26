@@ -15,6 +15,17 @@
             background-color: #EAEBEF;
         }
     </style>
+
+<?php if (isset($_GET['error'])) { ?>
+            <p class='error'> <?php echo $_GET['error']; ?></p>
+        <?php
+}?>
+
+        <?php if (isset($_GET['save'])) { ?>
+            <p class='save' align="center"> <?php echo $_GET['save']; ?></p>
+        <?php
+}?>
+
     <form action="registrarUsuarioLogica.php" method="POST" class="form-register">
         <h4 align="center">Registrar Usuarios</h4>
         <input type="text" class="form-control mb-3 controls" name="id" placeholder="ID" >

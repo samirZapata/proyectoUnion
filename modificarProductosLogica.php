@@ -16,9 +16,9 @@ if (empty($_POST['id']) || empty($_POST['nombre']) || empty($_POST['descripcion'
     $query = mysqli_query($con, $sql);
 
     if ($query) {
-        echo  '<p class="msg_save">Registro actualizado exitosamente</p>';
+        header("Location: modificarProductos.php?save=Registro actualizado exitosamente");
      }else {
-         $alert = '<p class="msg_error">Error al actualizar el registro</p>';
+         header("Location: modificarProductos.php?error=Error al actualizar el registro");
      }
 }
 

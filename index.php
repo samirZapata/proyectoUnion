@@ -11,8 +11,47 @@
 </head>
 
 <body>
-    <form action="validarLogin.php" method="post" class="formulario">
 
+    <style>
+    .error {
+        background: #E2867D;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 18px;
+        width: 350px;
+        margin: 0 auto;
+        position: relative;
+        top: 120px;
+    }
+
+    .save {
+        background: #2bda1f;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 18px;
+        width: 350px;
+        margin: 0 auto;
+        position: relative;
+        top: 600px;
+
+    }
+    </style>
+
+
+    <?php if (isset($_GET['error'])) { ?>
+    <p class='error'> <?php echo $_GET['error']; ?></p>
+    <?php
+        }?>
+
+    <?php if (isset($_GET['save'])) { ?>
+    <p class='save' align="center"> <?php echo $_GET['save']; ?></p>
+    <?php
+        }?>
+    
+
+    <form action="validarLogin.php" method="post" class="formulario">
         <h1>Login</h1>
         <div class="contenedor">
 

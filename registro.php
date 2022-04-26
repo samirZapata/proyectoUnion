@@ -19,6 +19,42 @@ include("conexion.php");
 </head>
 
 <body>
+
+<style>
+    .error {
+        background: #E2867D;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 18px;
+        width: 350px;
+        margin: 0 auto;
+        position: relative;
+        top: 120px;
+    }
+
+    .save {
+        background: #2bda1f;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 18px;
+        width: 350px;
+        margin: 0 auto;
+        position: relative;
+        top: 600px;
+
+    }
+    </style>
+
+    <?php if (isset($_GET['save'])) { ?>
+        <p class='save' align="center"> <?php echo $_GET['save']; ?></p>
+        <?php
+    } ?><?php if (isset($_GET['error'])) { ?>
+        <p class='error'> <?php echo $_GET['error']; ?></p>
+    <?php
+    } ?>
+
     <form action="logicaRegistro.php" method="POST" class="formulario">
 
         <h1>Registrate</h1>

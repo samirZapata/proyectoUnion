@@ -14,7 +14,7 @@
 
 <div>
     <h3>Iniciaste como usuario</h3>
-
+    
 <a href="index.php" >Salir</a>
 </div>
 
