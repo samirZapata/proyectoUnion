@@ -29,7 +29,7 @@
         <input type="text" class="form-control mb-3 controls" name="clave" placeholder="Clave" value="<?php echo $clave ?>" required>
         <input type="text" class="form-control mb-3 controls" name="id_perfil" placeholder="ID Perfil" value="<?php echo $id_perfil ?>" required>
 
-        <input type="submit" value="Eliminar Usuario class="botons" id="delBtn">
+        <input type="submit" value="Eliminar Usuario" class="botons" id="delBtn">
     </form>
 
 </body>
