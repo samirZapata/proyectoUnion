@@ -13,10 +13,14 @@
     
 <main>
 <nav class="nav">
-    
+
+
         <ul class="list">
+       
             <li class="list__item">
+            <img src="img/logo1.png" alt="La union">
                 <div class="list__button" >
+                
                 <i class='bx bxs-dashboard' class="list__arrow"></i>
                     <a href="#" class="nav__link">Dashboard</a>
                 </div>
