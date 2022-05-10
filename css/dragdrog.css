@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'verela round', sans-serif;
+}
+
+.drag-area{
+    border: 5px dashed #ddd;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    flex-direction: column;
+}

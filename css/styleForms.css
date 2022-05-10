@@ -16,7 +16,7 @@ body {
     width: 400px;
     background: #24303c;
     padding: 30px;
-    margin: auto;
+    margin: left auto;
     margin-top: 100px;
     border-radius: 4px;
     color: white;
@@ -78,5 +78,9 @@ body {
     margin: 0 auto;
     position: relative;
     top: 710px;
+    
+}
+
+.collection_card:hover{
     
 }

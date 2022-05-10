@@ -158,6 +158,33 @@
 
             </li>
 
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <i class='bx bxs-shopping-bag' class="list__arrow"></i>
+                    <a href="#" class="nav__link">Tienda</a>
+                    <i class='bx bx-chevron-right list__arrow'></i>
+                </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="" target="tienda" class="nav__link nav__link--inside">Agregar imagen de producto</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="" target="tienda" class="nav__link nav__link--inside">Ver stock</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="" target="tienda" class="nav__link nav__link--inside">Eliminar producto</a>
+                    </li>
+                    
+                    <li class="list__inside">
+                        <a href="" target="tienda" class="nav__link nav__link--inside">Modificar Producto</a>
+                    </li>
+                </ul>
+
+            </li>
+
             <li class="list__item">
                 <div class="list__button">
                     <i class='bx bx-run' class="list__img"></i>
