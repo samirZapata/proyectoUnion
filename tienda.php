@@ -3,9 +3,29 @@
     include 'db.php';
     $db = new Database();
     $con = $db->conectar();
-    $sql = $con->prepare("SELECT id, nombre, precio FROM productos ");
+    $sql = $con->prepare("SELECT id, nombre, precio FROM productos");
+    //$sqlID = $con->prepare("SELECT id FROM productos");
+    //$sqlID->execute();
     $sql->execute();
-    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+    //$resID = $sqlID->fetchAll(PDO::FETCH_ASSOC);
+    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);//ASOCIA LOS DATOS POR NOMBRE DE COLUMNA
+
+    if(isset($_SESSION['usuario'])){
+       
+        //TRAER PERFILES
+        $email_session = $_SESSION['usuario'];
+        $query_session = $pdo->prepare("SELECT * FROM datos WHERE usuario = '$email_session'");
+        $query_session->execute();
+        $session_usuarios = $query_session->fetchAll(PDO::FETCH_ASSOC);
+    
+        foreach($session_usuarios as $session_usuario){
+            $id_session = $session_usuario['id'];
+            $nombre_session = $session_usuario['nombre'];
+            $apellido_session = $session_usuario['usuario'];
+            $email_session = $session_usuario['clave'];
+        }
+
+    }
 
     //session_destroy();
 
@@ -44,22 +64,22 @@
                     <a href="#" class="nav-link active">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Catalogo</a>
+                    <a href="#" class="nav-link">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Ofertas</a>
+                    <a href="tienda.php" class="nav-link">Tienda</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                <a href="checkout.php" class="btn btn-outline-info">
+                <a href="checkout.php" target="_blank" class="btn btn-outline-info">
                         Carrito<span id="num_cart" class="badge bg-secondary"><?php echo $num_cart ?></span></a>
                 </li>
             </ul>
             <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
+                <a href="index.php" type="button" class="btn btn-outline-light me-2">Login</a>
+                <a href="registro.php" type="button" class="btn btn-warning">Sign-up</a>
             </div>
     </div>
   </div>
@@ -70,19 +90,19 @@
     <!-- SHOW ARTICLE IN CARD FORMAT-->
     <div class="container">
         <!-- Indicamos la cantidad de cards que queremos -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 car">
         <?php foreach ($resultado as $row) { ?> 
         <div class="col">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm p-3 mb-5 bg-body rounded">
 
           <!-- CREAMOS UNA CONDICION PARA TRAER LAS IMAGENES DE DISCO Y NO DE LA DB -->
           <?php
             $id = $row['id'];
-            $imagen = "img/productos/". $id ."/tornillos.jpg";
-
+            $imagen = 'img/productos/' . $id . '/llave.jpg';//RUTA DE LA IMAGEN
+          
             //EN CASO DE NO ENCONTRAR LA IMG EN LA RUTA TOMARA UNA IMG PREDETERMINADA
             if (!file_exists($imagen)) {
-              $imagen = "img/404.png";
+              $imagen = 'img/404E.jpg';
             }
           ?>
             <!-- FIN DEL ALGORITMO -->
@@ -111,6 +131,18 @@
 
 
     <!--- ==========================FOOTER======================== -->
+    <div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="tienda.php" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Services</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">&copy; 2022 La Union, Inc</p>
+  </footer>
+</div>
      <!--- ==========================MAIN JS======================== -->
     <!-- <script src="js/tienda.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

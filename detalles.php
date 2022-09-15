@@ -24,8 +24,8 @@
 
             if ($sql->fetchColumn() > 0) {
                 
-                $sql = $con->prepare("SELECT nombre, descripcion, precio FROM productos");
-                $sql->execute();
+                $sql = $con->prepare("SELECT nombre, descripcion, precio FROM productos WHERE id = ?");
+                $sql->execute([$id]);
                 $row = $sql->fetch(PDO::FETCH_ASSOC);
                 $nombre = $row['nombre'];
                 $descripcion = $row['descripcion'];
@@ -41,7 +41,7 @@
                 $rutaImg = $dir_images . 'tornillos.jpg';
                 //VERIFICAMOS SI EXISTE LA IMAGEN
                 if (!file_exists($rutaImg)) {
-                    $rutaImg = 'img/404.png';
+                    $rutaImg = 'img/404E.jpg';
                 }
 
                 //INGRESAMOS A LAS CARPETAS Y NOS QUEDAMOS CON TODAS LAS IMAGENES
@@ -103,11 +103,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Catalogo</a>
+                    <a href="#" class="nav-link">Servicios</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Ofertas</a>
+                    <a href="#" class="nav-link">Tienda</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">About</a>
@@ -132,10 +132,12 @@
     <!-- SHOW ARTICLE IN CARD FORMAT-->
     <div class="container">
        <div class="row">
+
+       
             <div class="col-md-6 order-md-1">
 
 
-
+                
                 <div id="carouselImages" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -180,6 +182,8 @@
 
             </div>
        </div>
+
+
     </div>
 </main>
 

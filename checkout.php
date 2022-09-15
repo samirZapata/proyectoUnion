@@ -58,22 +58,23 @@
                     <a href="#" class="nav-link active">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Catalogo</a>
+                    <a href="#" class="nav-link">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Ofertas</a>
+                    <a href="#" class="nav-link">Tienda</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">About</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                 <a href="carrito.php" class="btn btn-outline-info">
                         Carrito<span id="num_cart" class="badge bg-secondary"><?php echo $num_cart ?></span></a>
-                </li>
+                </li> -->
             </ul>
             <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
+            <a href="#" class="btn btn-warning">Perfil</a>
+                <a href="checkout.php" class="btn btn-outline-info">
+                        Carrito<span id="num_cart" class="badge bg-secondary"><?php echo $num_cart ?></span></a>
             </div>
     </div>
   </div>
@@ -88,7 +89,7 @@
             <!-- CONSTRUCCION DE LA TABLA -->
             <h3 class="text-center">Mi Carrito</h3>
             <div class="table-responsive table-hover">
-                <table class="table">
+                <table class="table ">
                     <thead class="text-muted">
                         <tr>
                             <th class="">Producto</th>
